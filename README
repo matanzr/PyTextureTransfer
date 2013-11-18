@@ -1,4 +1,4 @@
-<h1>Python Texture Transfer</h1>
+    Python Texture Transfer
 
 This is a python implementation of Texture transfer as presented in Siggraph 2001. 
 The implementation icludes some optimizations of the original method as suggested in later publications. 

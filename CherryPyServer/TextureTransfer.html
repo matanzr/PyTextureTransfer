@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <title>Texture Transfer</title>
+</head>
+<body>
+<div class="jumbotron">
+     <div class="container">
+        <h2>Texture Transfer Tool</h2>
+        <p>Post your images here and result will appear in the gallery below in few minutes. <br/></p>
+        <form action="upload" method="post" enctype="multipart/form-data">
+            <tr>
+                <th><label for="texture">Texture:</label></th>
+                <td>
+                    <input type="file" id="texture" name="texture" required>
+                </td>
+
+                <td><label for="target">Target:</label></th>
+                <td>
+                    <input type="file" id="target" name="target" required>
+                </td>
+            </tr>
+            <input class="btn btn-primary btn-lg" type="submit" />
+        </form>
+     </div>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <img src="images/1382733685.33.png">
+        </a>
+      </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+Python Texture Transfer
+
+This is a python implementation of Texture transfer as presented in Siggraph 2001. 
+The implementation icludes some optimizations of the original method as suggested in later publications. 
+
+- Requirements:
+Scipy (and numpy)
+PIL
+
+I've included a cherrypy server that runs the texture transfer with a simple interface. The server requires CherryPy installed also.
+
+
+- Usage:
+
+Make a TextureTransferTool object and then use .start()
+
+parameters:
+source - The image used as texture
+target - The image to texture
+blockW - Block width (block is the size of a patch from the source image)
+blockH - Block width
+num_of_iterations - number of iterations. as the iteration incease the block size is reduced and more weight is give to the texture matching over the target matching
+overlap_x_frac - the overlap between blocks, horizontal (recommeneded value is around 0.3)
+overlap_y_frac - the overlap between blocks, vertical (recommeneded value is around 0.3)
+block_reduciton_factor - the size decresement (between 0-1) of the block size after each iteration
+amount_to_probe_frac - the amount of attempted blocks to try and match to the input block
+
+sample usage:
+
+t = texture_transfer.TextureTransferTool(source, target, 64, 64, 3, 0.3, 0.3, 0.8, 0.005, 0)
+t.start(output)	
